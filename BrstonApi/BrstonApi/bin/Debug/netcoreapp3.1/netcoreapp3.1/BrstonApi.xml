@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BrstonApi</name>
+    </assembly>
+    <members>
+        <member name="T:BrstonApi.Controllers.BrstonApiController">
+            <summary>
+            @Api(description = "Brston车辆查询接口") 
+            </summary>
+        </member>
+        <member name="M:BrstonApi.Controllers.BrstonApiController.QueryCarByVIN(System.String,System.String)">
+            <summary>
+            VIN码解析接口
+            </summary>
+            <param name="userkey">用户密钥</param>
+            <param name="VIN">车辆VIN号</param>
+            <returns></returns>
+        </member>
+        <member name="M:BrstonApi.Controllers.BrstonApiController.Regist(System.String,System.String,System.String,System.String)">
+            <summary>
+            注册用户
+            </summary>
+            <param name="userkey">用户密钥</param>
+            <param name="username">用户名称（必填）</param>
+            <param name="phonenumber">手机号</param>
+            <param name="useremail">邮箱（必填）</param>
+            <returns></returns>
+        </member>
+        <member name="M:BrstonApi.Controllers.BrstonApiController.TheThirdParty(System.String,System.String,System.DateTime)">
+            <summary>
+            调用第三方接口
+            </summary>
+            <param name="VIN"></param>
+            <param name="City"></param>
+            <param name="Date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BrstonApi.Controllers.BrstonApiController.Test">
+            <summary>
+            测试方法 
+            克隆List
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:BrstonApi.Entities.Users.VersionCode">
+            <summary>
+            接口调用类型 1：标准版 2：豪华版 3：豪华增价版
+            </summary>
+        </member>
+        <member name="T:BrstonApi.Entities.VehicleBaseModel">
+            <summary>
+            该模型弃用 
+            改用调用存储过程，返回结果到SearchVINView
+            </summary>
+        </member>
+        <member name="M:BrstonApi.Repository.IUsersRepository.GetUserByKey(System.String)">
+            <summary>
+            根据用户密钥查询用户信息
+            </summary>
+            <param name="userkey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BrstonApi.Repository.IUsersRepository.AddUserLog(BrstonApi.Entities.UserLog)">
+            <summary>
+            添加一条用户调用日志
+            </summary>
+            <param name="log"></param>
+        </member>
+        <member name="M:BrstonApi.Repository.IUsersRepository.UpdateUserTotalCount(System.String)">
+            <summary>
+            更新用户调用总次数
+            </summary>
+            <param name="userkey"></param>
+        </member>
+        <member name="M:BrstonApi.Repository.IUsersRepository.UpdateUserInfoByUser(System.String,System.String,System.String,System.String)">
+            <summary>
+            用户注册
+            </summary>
+            <param name="userkey"></param>
+            <param name="username"></param>
+            <param name="phonenumber"></param>
+        </member>
+        <member name="M:BrstonApi.Repository.IUsersRepository.GetColumnsByUser(System.String)">
+            <summary>
+            根据用户密钥获取显示的列
+            </summary>
+            <param name="userkey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BrstonApi.Repository.IUsersRepository.SaveAsync">
+            <summary>
+            异步保存到数据库方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BrstonApi.Repository.UsersRepository.UpdateUserTotalCount(System.String)">
+            <summary>
+            更新用户调用总次数
+            </summary>
+            <param name="userkey"></param>
+        </member>
+        <member name="M:BrstonApi.Repository.UsersRepository.UpdateUserInfoByUser(System.String)">
+            <summary>
+            用户注册
+            </summary>
+            <param name="userkey"></param>
+        </member>
+        <member name="M:BrstonApi.Repository.UsersRepository.TheThirdParty(System.String,System.String,System.DateTime)">
+            <summary>
+            调用第三方接口
+            </summary>
+            <param name="VIN">车架号</param>
+            <param name="City">城市</param>
+            <param name="Date">调用时间</param>
+            <returns></returns>
+        </member>
+        <member name="P:BrstonApi.ViewModel.ApiResultModel.status">
+            <summary>
+            状态码  1：执行成功   -1:程序执行异常  
+            </summary>
+        </member>
+        <member name="P:BrstonApi.ViewModel.ApiResultModel.msg">
+            <summary>
+            接口返回信息 对应状态码
+            </summary>
+        </member>
+        <member name="P:BrstonApi.ViewModel.ApiResultModel.data">
+            <summary>
+            接口返回数据信息
+            </summary>
+        </member>
+        <member name="P:BrstonApi.ViewModel.ApiResultModel.errormsg">
+            <summary>
+            接口异常信息
+            </summary>
+        </member>
+    </members>
+</doc>
